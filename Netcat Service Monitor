@@ -1,0 +1,7 @@
+#!/bin/bash
+# Netcat service monitor
+echo "What is the target? "
+read TARGET
+echo "What port? "
+read PORT
+while `nc -vv -z -w3 $TARGET $PORT > /dev/null` ; do echo "Service is ok"; sleep 1; done; echo "Service is dead"; while (true); do echo -e "\x07"; done
