@@ -1,0 +1,9 @@
+On client machine, use the following 
+#nc [IP_TO_RELAY] [PORT_RELAY_LISTENING_ON]
+
+On relay machine
+#mknod [BACKPIPE_NAME] p
+#nc -l -p [PORT_CLIENT_IS_LISTENING_ON] 0<[FULL_PATH_TO_BACKPIPE] | nc [TARGET_IP_ADDR] [TARGET_PORT] 1>[FULL_PATH_TO_BACKPIPE]
+
+On target machine
+#nc -l -p [TARGET_PORT]
