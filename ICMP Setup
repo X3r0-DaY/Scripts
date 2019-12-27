@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "What network (xx.xx.xx.xx) are we operating under? "
+read NETWORK
+echo "What is the subnet mask? "
+read SUBNET
+echo "What interface? "
+read INTERFACE
+iptables -t nat -A POSTROUTING -s $NETWORK/$SUBNET -o $INTERFACE -j MASQUERADE
+echo "Did you get any errors? If so, double check your input and try again. Press any key to return to main menu "
+read
+EXIT
