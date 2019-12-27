@@ -1,0 +1,24 @@
+#!/bin/bash
+# Add network route
+echo "This utility will help you add IP routes. Would you like to continue? [y/n]"
+read ANS
+if [ $ANS == "n" ]
+then
+echo "Now Exiting..."
+sleep 5
+exit
+else
+echo "What gateway do you want to route the traffic through?"
+read GATE
+clear
+echo "What network would you like to add?"
+read NET
+clear
+echo "Now adding route. Please wait..."
+sleep 2
+ip route add $NET via $GATE
+clear
+echo "Route added successfully!! Returning to main script..."
+sleep 3
+fi
+exit
