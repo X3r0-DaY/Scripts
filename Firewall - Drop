@@ -1,0 +1,13 @@
+#!/bin/bash
+# Firewall DROP Rule
+echo "What is the IP of the machine you want to restrict? "
+read MACHINE
+echo "What port number do you want to block? "
+read PORT
+echo "Is this tcp or udp? "
+read TCPUDP
+echo "Press any key to continue...."
+read
+iptables -A INPUT -s $MACHINE -p $TCPUDP --dport $PORT -j DROP
+echo "Rule added!"
+read
