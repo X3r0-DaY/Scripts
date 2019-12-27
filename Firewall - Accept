@@ -1,0 +1,12 @@
+#!/bin/bash
+# FW ACCEPT Rule
+echo "What port number do you want to allow inbound? "
+read PORT
+echo "What machine do you want to allow? "
+read MACHINE
+echo "tcp or udp? "
+read TCPUDP
+echo "Press enter to add rule "
+iptables -I INPUT 1 -s $MACHINE -p $TCPUDP --dport $PORT -j ACCEPT
+echo "Rule added! Press any key to exit..."
+read
