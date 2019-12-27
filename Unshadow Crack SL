@@ -1,0 +1,24 @@
+#!/bin/bash
+# Unshadow and crack passwords using John and Seclists
+echo "This script is for unshadowing and cracking *Nix passwords, using Johns wordlist. Where is the passwd file? "
+read PASSWD
+clear
+echo "Where is the unshadowed file? "
+read UNSHADOWED
+clear
+echo "What would you like the saved file to be named? (Optional, add directory) "
+read NAME
+clear
+echo ""
+echo ""
+ls "/usr/share/seclists/Passwords"
+echo""
+echo "What wordlist would you like to use? "
+read LIST
+clear
+unshadow $PASSWD $UNSHADOWED > $NAME
+john --wordlist=/usr/share/seclists/Passwords/$LIST $NAME
+john --show $NAME
+echo ""
+echo "Here is the results of the attack. This info can also be found in the output file $NAME"
+sleep 60
