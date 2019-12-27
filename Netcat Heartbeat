@@ -1,0 +1,7 @@
+#!/bin/bash
+# Netcat service heartbeat
+echo "What is the target? "
+read TARGET
+echo "What port do you want to listen on? "
+read PORT
+while (true); do nc -vv -z -w3 $TARGET $PORT > /dev/null && echo -e "\x07"; sleep 1; done
