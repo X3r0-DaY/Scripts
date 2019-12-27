@@ -1,0 +1,14 @@
+#!/bin/bash
+# Activates scripts downloaded from this repo. Please ensure script names and assigned perms are correct
+chmod 777 WEPCrack.sh
+chmod 777 unshadow-crack-SL
+chmod 777 unshadow-crack
+chmod 777 start-services
+chmod 777 routeadd
+chmod 777 null-sessions
+chmod 777 net-passwdcrack
+chmod 777 mysql-connect
+chmod 777 ettercapDriftnet.sh
+chmod 777 ettercapDriftnet.sh
+chmod 777 arp-poison
+chmod 777 sczi
