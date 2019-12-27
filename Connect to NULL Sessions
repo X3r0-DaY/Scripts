@@ -1,0 +1,8 @@
+#!/bin/bash
+# Connect to NULL Sessions
+echo "Please enter network share in which you'd like to connect to for a null session: "
+read SHARE
+echo "Please enter host: " 
+read HOST
+echo "Please wait..."
+smbclient \\\\$HOST\\$SHARE -N -U''*
