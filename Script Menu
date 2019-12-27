@@ -1,0 +1,154 @@
+#!/bin/bash
+# Used to combine and launch most scripts in this repo. This was designed to assist with eLearnSecurity's eJPT course. You may add options by modifying the script. The script is kept simple for beginners to be able to modify
+echo""
+echo""
+echo "ScZi's eLearn Assistant v 1.0"
+sleep 2
+clear
+##################################################################################################
+#echo "Please enter your username: "
+#read USER
+#echo "Please enter your password: "
+#read PASS
+#echo "Please wait... authenticating: "
+#if [ $USER == 'kyle' ]
+#then echo "Username verified. Checking password..."
+#else
+#echo "I'm sorry, your username is incorrect. Good bye!!"
+#exit
+#fi
+#echo "Checking password..."
+#if [ $PASS == 'dolphin' ]
+#then echo "Welcome, your credentials have been verified"
+#cred="verified"
+#else
+#echo "WARNING... YOU ARE ATTEMPTING TO ENTER A RESTRICTED SYSTEM WITH INCORRECT CREDENTIALS.. YOUR ACTION HAS BEEN LOGGED"
+#sleep 2
+#echo "NOW QUITTING"
+#sleep 5
+#exit
+#fi
+#echo "Fetching syscoms...."
+#sleep 5
+#
+#
+#
+####################################################################################################
+echo "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMMMMMMM        MMMMMMMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMMMMM            MMMMMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMMMM              MMMMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMMM                MMMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMM                 MMMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMM                  MMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMM                  MMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMM    MMM    MMM    MMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMM   MMMMM   MMMM   MMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMM   MMMMM   MMMM   MMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMMM   MMMM M MMMM  MMMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMVKMMMMMM        M        MMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMMM       MMM      MMMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMMMMMMM   MMM  MMMMMMMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMMMMM MM       M  MMMMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMMMMM  M M M M M MMMMMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMM  MMMMM MMMMMMMMM MMMMM   MMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMM    MMMM M MMMMM M MMMM    MMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMM    MMMM   M M M  MMMMM   MMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMM    MMMM         MMM      MMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMM       MMMM     MMMM       MMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMM         MMMMMMMM      M  MMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMM  MMM      MMM      MMMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMMMMMM  MM       MMMMMMM  MMMMMMMMMMMM"
+echo "MMMMMMMMMMMMM  MMMMMMM       MMMMMMMMM   MMMMMMMMMMMM"
+echo "MMMMMMMMMMMM    MMM        MM            MMMMMMMMMMMM"
+echo "MMMMMMMMMMMM            MMMM            MMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMM        MMMMMMMMMMMMM       MMMMMMMMMMMM"
+echo "MMMMMMMMMMMM      MMMMMMMMMMMMMMMMMMM    MMMMMMMMMMMM"
+echo "MMMMMMMMMMMMM   MMMMMMMMMMMMMMMMMMMMMM   MMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM "
+echo "**                                          iii    **"
+echo "**    sssssssssss     ccccccccc             iii    **"
+echo "**    ssssssssssss    ccccccccc                    **"
+echo "**    ssss            ccc                   iii    **"
+echo "**    ssss            ccc    zzzzzzzzzzzz   iii    **"
+echo "**    ssssssssssss    ccc    zzzzzzzzzzzz   iii    **"
+echo "**    ssssssssssss    ccc            zzz    iii    **"
+echo "**            ssss    ccc           zzz     iii    **"
+echo "**            ssss    ccccccccc    zzz             **"
+echo "**    ssssssssssss    ccccccccc   zzzzzzzzzzz      **"
+echo "**    ssssssssssss               zzzzzzzzzzzz      **"
+echo "**                                                 **"
+echo "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+echo "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+echo ""
+echo ""
+echo "Welcome to ScZi's eLearn Assistant"
+echo""
+echo "1. Crack Network Based Password"
+echo "2. Crack Local Password"
+echo "3. Crack Password Using Seclists"
+echo "4. Connect to MYSQL DB (Already Have Credentials)"
+echo "5. Connect to NULL Session"
+echo "6. Crack Wireless WEP (Alpha Version)"
+echo "7. Arp Poison"
+echo "8. MITM w Ettercap and Driftnet (No SSL)"
+echo "9. Launch Metasploit"
+echo "10. Add an IP Route through a specified gateway"
+echo ""
+echo "Please select option Z to start pentesting services (POSTGRESQL, METASPLOIT, NESSUS)"
+echo ""
+echo "Please select an option above: "
+read OPT
+if [ $OPT == "1" ]
+then
+xterm -e ./net-passwdcrack
+./sczi
+elif [ $OPT == "2" ] 
+then
+xterm -e ./unshadow-crack
+./sczi
+elif [ $OPT == "3" ] 
+then
+xterm -e ./unshadow-crack-SL
+./sczi
+elif [ $OPT == "4" ] 
+then
+xterm -e ./mysql-connect
+./sczi
+elif [ $OPT == "5" ]
+then 
+xterm -e ./null-sessions
+./sczi
+elif [ $OPT == "6" ] 
+then
+xterm -e ./WEPCrack.sh
+./sczi
+elif [ $OPT == "7" ]
+then
+xterm -e ./arp-poison 
+./sczi
+elif [ $OPT == "8" ]
+then
+xterm -e ./ettercapDriftnet.sh 
+./sczi
+elif [ $OPT == "9" ]
+then
+xterm -e msfconsole
+./sczi
+elif [ $OPT == "10" ]
+then
+xterm -e ./routeadd
+./sczi
+elif [[ $OPT == "z" || $OPT == "Z" ]]
+then
+xterm -e ./start-services
+./sczi
+else
+echo "You have selected an invalid option. Refreshing...."
+sleep 3
+./sczi
+fi
+exit
