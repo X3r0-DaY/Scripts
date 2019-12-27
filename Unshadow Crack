@@ -1,0 +1,11 @@
+#!/bin/bash
+# Unshadow and crack passwords with John
+echo "This script is for unshadowing and cracking *Nix passwords, using Johns wordlist. Where is the passwd file? "
+read PASSWD
+echo "Where is the unshadowed file? "
+read UNSHADOWED
+echo "What would you like the saved file to be named? (Optional, add directory) "
+read NAME
+unshadow $PASSWD $UNSHADOWED > $NAME
+john --wordlist=/usr/share/john/password.lst $NAME
+john --show $NAME
