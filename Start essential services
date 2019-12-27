@@ -1,0 +1,22 @@
+#!/bin/bash
+# This script is used to start essential services upon boot to save time invoking them later. Please modify to correspond with services you may or may not have installed on your system
+echo "Please wait while we make sure the following services are started: POSTGRESQL, METASPLOIT, NESSUS, IP Forwarding"
+echo "Starting POSTGRESQL"
+service postgresql start > /dev/null 2>&1
+echo "Starting Metasploit"
+service metasploit start > /dev/null 2>&1
+echo "Starting Metasploit DB"
+service msfdb init > /dev/null 2>&1
+echo "Starting SSH"
+service ssh start > /dev/null 2>&1
+service sshd start > /dev/null 2>&1
+echo "Starting Nessus"
+/etc/init.d/nessusd start > /dev/null 2>&1 
+echo "Setting up IP Forwarding"
+echo 1 > /proc/sys/net/ipv4/ip_forward
+sleep 3
+echo "Starting Dradis Reporting Tool"
+service dradis start > /dev/null 2>&1 
+echo "Services started successfully!"
+sleep 5
+exit
