@@ -1,0 +1,10 @@
+#!/bin/bash
+#MySQL Connect
+echo "Please enter the IP of the database in which you would like to connect: "
+read DB
+echo "Please enter username: "
+read USER
+echo "Please enter password: "
+read PASSWORD
+echo "Thank you, please wait.... "
+mysql -h $DB -u $USER -p$PASSWORD
