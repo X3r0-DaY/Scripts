@@ -1,0 +1,13 @@
+#!/bin/bash
+iwconfig
+ifconfig
+echo "What interface do you want to increase the strength of? "
+read WIRELESS
+echo "Please wait...."
+ifconfig $WIRELESS down
+iw reg set GY
+ifconfig $WIRELESS up
+sleep 1
+ifconfig
+echo "If you didn't receive errors, you should be good to go!"
+read
